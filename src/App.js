@@ -10,12 +10,12 @@ class App extends Component {
     super();
    
     //Se não existir nada no local storage, novo array é iniciado
-    if(!JSON.parse(localStorage.getItem("array"))){
+    if(!JSON.parse(localStorage.getItem("array")) && JSON.parse(localStorage.getItem("categoria"))){
       this.state = {
         notas: [],
         categorias: JSON.parse(localStorage.getItem("categoria"))
       }
-    }else if(!JSON.parse(localStorage.getItem("categoria"))){
+    }else if(!JSON.parse(localStorage.getItem("categoria")) && JSON.parse(localStorage.getItem("array"))){
       this.state = {
         notas: JSON.parse(localStorage.getItem("array")),
         categorias: [],

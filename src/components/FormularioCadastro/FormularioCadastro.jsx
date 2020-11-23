@@ -25,6 +25,7 @@ class FormularioCadastro extends Component {
     this.props.criarCard(this.titulo, this.texto, this.categoria);
   }
   render() {
+    //console.log(this.props);
     return (
       <form className="form-cadastro " onSubmit={this.criarCard.bind(this)}>
         <select
